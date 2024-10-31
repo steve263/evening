@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+{% block content %}
+    <h1>Welcome to our home page</h1>
+    <h3>Users</h3>
+    <table> 
+      <tr>
+          <th>Name </th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Delete</th>
+          <th>Updating</th>
+      </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.gender }}</td>
+            <td><a href="/delete_user/{{ user.id }}">delete</a></td>
+            <td><a href="/update_user/{{ user.id }}">update</a></td>
+        </tr>
+    	
+    {% endfor %}
+    
+     
+    </table>
+{% endblock %}

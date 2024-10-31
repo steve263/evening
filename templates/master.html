@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our title</title>
+</head>
+<body>
+<a href="{% url 'home-url' %}}"><button>Home</button></a>
+<a href="{% url 'about-url' %}"><button>About</button></a>
+<a href="{% url 'gallery-url' %}"><button>Gallery</button></a>
+<a href="{% url 'register-url' %}"><button>Register</button></a>
+<a href="{% url 'login-url' %}"><button>Login</button></a>
+<hr>
+{% if messages  %}
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+{% endif %}
+
+{% block content %}
+{% endblock %}
+</body>
+</html>

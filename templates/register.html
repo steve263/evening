@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+{% block content %}
+    <h1>Welcome to our register page</h1>
+    <form method="post" action="{% url 'register-url' %}">
+        {% csrf_token %}
+        <input name="jina" placeholder="Enter your name" type="text"><br><br>
+        <input  name="arafa" placeholder="Enter your email" type="text"><br><br>
+        <input   name="siri" placeholder="Enter your password" type="text"><br><br>
+        <select name="jinsia" id="">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+        <input name="xyz" value="Register" type="Submit">
+    </form>
+{% endblock %}
